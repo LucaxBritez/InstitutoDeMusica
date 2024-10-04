@@ -1,0 +1,307 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Asegúrate de que html y body no tengan márgenes */
+html, body {
+    margin: 0; /* Sin márgenes */
+    padding: 0; /* Sin padding */
+}
+
+/* Tipografía principal */
+body {
+    font-family: 'Lato', sans-serif;
+    color: #4a4a4a;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+    overflow-x: hidden; /* Evitar desbordamiento horizontal */
+}
+
+/* Estilo del header sin margen inferior */
+header {
+    background: linear-gradient(90deg, #3a4a6a, #1b3a6d);
+    color: white;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+header h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #fcbf49;
+    transform: scale(1.05);
+}
+
+.parallax {
+    height: 500px; /* Ajusta la altura según lo necesites */
+    background-image: url('../images/Conservatorio(Paralax).jpg'); /* Asegúrate que la ruta sea correcta */
+    background-attachment: fixed; /* Mantiene la imagen fija durante el desplazamiento */
+    background-position: center; /* Centra la imagen */
+    background-size: cover; /* Ajusta la imagen para cubrir el área */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 100vw; /* Asegura que ocupe el 100% del ancho de la ventana */
+    position: relative; /* Asegúrate de que esté en posición relativa */
+    left: 50%; /* Mueve el elemento al 50% desde la izquierda */
+    right: 50%; /* Mueve el elemento al 50% desde la derecha */
+    
+    margin-left: -50vw; /* Compensa el ancho del elemento para llevarlo al borde */
+    margin-right: -50vw; /* Compensa el ancho del elemento para llevarlo al borde */
+    padding: 0; /* Sin padding */
+    border-radius: 0; /* Asegúrate de que no haya bordes redondeados */
+}
+    
+.parallax .overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Sombra oscura para el texto */
+    padding: 2rem;
+    text-align: center;
+}
+
+.parallax h2 {
+    font-size: 3rem;
+}
+
+.parallax p {
+    font-size: 1.5rem;
+}
+
+/* Estilo para la sección de historia */
+.historia-contenido {
+    display: flex; /* Usamos flexbox */
+    justify-content: space-between; /* Espacio entre el texto y la imagen */
+    align-items: center; /* Centra verticalmente el contenido */
+    margin-top: 1.5rem; /* Espacio entre el título y el contenido */
+    height: 300px; /* Ajusta la altura según tus necesidades */
+}
+
+.historia-contenido p {
+    flex: 1; /* Ocupa la mitad del espacio disponible a la izquierda */
+    margin-right: 1rem; /* Espacio entre el texto y la imagen */
+    text-align: center; /* Centra el texto horizontalmente */
+    line-height: 1.5; /* Aumenta el espacio entre líneas para mejorar la legibilidad */
+}
+
+.historia-imagen {
+    flex: 1; /* Ocupa la otra mitad del espacio */
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 0; /* Sin bordes redondeados */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    max-height: 300px; /* Ajusta esta altura según tus necesidades */
+}
+
+#cursos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0; /* Sin espacio entre los artículos */
+    margin: 0;
+    padding: 0;
+}
+
+#cursos article {
+    flex: 1 1 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+#cursos .imagenes {
+    display: flex; /* Mantener las imágenes en fila */
+    margin: 0;
+    padding: 0;
+}
+
+#cursos .imagenes a {
+    flex: 1; /* Cada enlace ocupa el mismo espacio */
+    margin: 0; /* Sin margen adicional */
+}
+
+#cursos .imagenes img {
+    width: 100%; /* Cada imagen ocupa el 100% del ancho de su contenedor */
+    height: 300px; /* Ajusta la altura según sea necesario */
+    object-fit: cover; /* Asegura que la imagen mantenga proporciones sin distorsionarse */
+    border-radius: 0; /* Sin bordes redondeados */
+    margin: 0; /* Elimina márgenes */
+    padding: 0; /* Sin relleno */
+}
+
+#cursos h2 {
+    font-size: 2.5rem; /* Tamaño del título de la sección */
+    margin: 2rem 0; /* Margen superior e inferior */
+    margin-left: 1rem; /* Margen a la izquierda para el título de la sección */
+    text-align: center; /* Centra el texto si es necesario */
+}
+
+#cursos h3 {
+    font-size: 2rem; /* Tamaño del título del curso */
+    margin-bottom: 1rem; /* Margen inferior */
+    margin-left: 1rem; /* Margen a la izquierda para el título del curso */
+}
+
+#cursos p {
+    font-size: 1.2rem; /* Tamaño del texto */
+    margin-bottom: 1rem; /* Margen inferior */
+    margin-left: 1rem; /* Margen a la izquierda para el texto */
+}
+
+#cursos .button {
+    padding: 0.8rem 1.5rem; /* Espaciado interno del botón */
+    background-color: #fcbf49; /* Color de fondo del botón */
+    color: #333; /* Color del texto del botón */
+    text-decoration: none; /* Sin subrayado en el texto del botón */
+    font-weight: bold; /* Negrita en el texto del botón */
+    border-radius: 25px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+    margin-left: 1rem; /* Margen a la izquierda para el botón */
+}
+
+#cursos .button:hover {
+    background-color: #ffcc33; /* Cambio de color al pasar el mouse */
+}
+
+main {
+    padding: 0; /* Sin padding */
+    margin: 0; /* Sin márgenes */
+    width: 100%; /* Asegura que ocupe el 100% del ancho disponible */
+    background-color: #2C566A; /* Color de fondo */
+}
+
+section {
+    background-color: white;
+    margin-bottom: 4rem;
+    padding: 2.5rem;
+    border-radius: 0; /* Eliminar bordes redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 3rem;
+    color: #1b3a6d;
+    margin-bottom: 1.5rem;
+}
+
+section p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Imágenes */
+section img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+/* Botones */
+button, a.button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #fcbf49;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.3s;
+    text-align: center;
+}
+
+button:hover, a.button:hover {
+    background-color: #ffcc33;
+    transform: translateY(-2px);
+}
+
+/* Videos y audios */
+section audio {
+    display: block; /* Muestra el audio como un bloque */
+    margin: 20px auto; /* Centra el audio horizontalmente */
+    width: 100%; /* Ocupa el 100% del ancho disponible */
+    max-width: 600px; /* Ancho máximo para el audio */
+}
+
+section iframe {
+    display: block; /* Muestra el iframe como un bloque */
+    margin: 20px auto; /* Centra el iframe horizontalmente */
+    width: 100%; /* Ocupa el 100% del ancho disponible */
+    max-width: 800px; /* Ancho máximo para el iframe */
+    height: 500px; /* Ajusta esta altura según sea necesario */
+}
+
+.video-local {
+    display: flex; /* Usar flexbox */
+    flex-direction: column; /* Alinear elementos en columna */
+    align-items: flex-start; /* Alinear el título a la izquierda */
+    justify-content: center; /* Centrar verticalmente si es necesario */
+    min-height: 400px; /* Altura mínima para centrar verticalmente */
+    margin: 20px 0; /* Margen superior e inferior */
+}
+
+.video-local h2 {
+    font-size: 2.5rem; /* Tamaño del texto */
+    margin: 1rem 0; /* Margen superior e inferior */
+    margin-left: 1rem; /* Margen a la izquierda */
+    color: #1b3a6d; /* Color del texto */
+}
+
+.video-local video {
+    
+    width: 100%; /* O usa un valor fijo, por ejemplo, 560px */
+    max-width: 560px; /* Ancho máximo */
+    height: auto; /* Mantener la proporción */
+    border-radius: 0; /* Sin bordes redondeados */
+    margin: 0 auto; /* Centrar el video */
+}
+
+
+
+/* Footer */
+footer {
+    background: #2C566A; /* Color de fondo */
+    color: white; /* Color del texto */
+    text-align: center; /* Alineación centrada */
+    padding: 2rem; /* Espaciado interno */
+}
+
+footer p {
+    margin: 0; /* Sin margen */
+    font-size: 1.2rem; /* Tamaño de fuente */
+}
